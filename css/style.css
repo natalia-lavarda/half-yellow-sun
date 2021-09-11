@@ -1,16 +1,14 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Mantém o valor mesmo que tenha padding - ou outro atributo (não soma tal qual o content-box */
-    font-size: 16px;
+    box-sizing: border-box;
+    font-size: 14px;
     font-family: 'Nunito Sans', sans-serif;
 }
 
 .cabecalho {
     width: 100%;
-    height: 95vh;
-    background: linear-gradient(rgba(172, 149, 35, 0.5), rgba(218, 188, 42, 0.7)), url(./../img/girassol.jpg) no-repeat;
-    background-size: cover;
+    height: 90vh;
 }
 
 .menu {
@@ -18,142 +16,170 @@
     background-color: #dabc2a;
     display: flex;
     justify-content: space-between;
-    height: 50px;
+    height: 150px;
     align-items: center;
-    padding: 0 20px;
+    padding: 15px 15px;
     position: fixed;
+    top: 0;
 }
-
 
 .menu__logo{
     color: #ffffff;
     text-decoration: none;
     list-style: none;
-    font-size: 30px;
-    margin-left: 5px;
+    font-size: 2.2rem;
 }
 
 .menu-navegacao {
     display: flex;
+    flex-direction: column;
     list-style: none;
+}
+
+.menu-navegacao li {
+    display: block;
+    text-align: right;
+    padding: 5px;
 }
 
 .menu-navegacao__link {
     text-decoration: none;
     color: #ffffff;
-    font-size: 18px;
-    padding: 10px;
+    font-size: 1.3rem;
     transition: 0.5s all;
 }
 
 .menu-navegacao__link:hover {
     background-color: #ac9523;
+    padding: 8px;
 }
 
 .banner {
-    height: 100%;
+    margin-top: 150px;
+    height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items:flex-start;
-    margin-left: 2%;
+    background: linear-gradient(rgba(172, 149, 35, 0.5), rgba(218, 188, 42, 0.7)), url(./../img/girassol.jpg) no-repeat;
+    background-size: cover;
+    background-position: right;
 }
 
 .banner__titulo {
     color: #ffffff;
-    font-size: 30px;
+    font-size: 2rem;
     text-shadow: 1px 1px 2px #ac9523;
     margin-bottom: 15px;
     text-align: left;
+    margin-left: 20px;
 }
 
 .banner__subtitulo {
     color: #ffffff;
-    font-size: 20px;
+    font-size: 1.4rem;
     text-shadow: 1px 1px 2px #ac9523;
     width: 60%;
     text-align: left;
     font-weight: 500;
+    margin-left: 20px;
 }
 
 main {
     width: 80%;
-    margin: 3% 5%;
+    margin: -50px auto 50px auto;
     background: linear-gradient(rgba(255, 249, 219, 0.856), rgba(216, 183, 17, 0.945));
     border-radius: 10px;
-    box-shadow: 0px 0px 10px #cccccc; /*1º: eixo x, 2º: eixo y, 3º: desfoque, 4º: expansão da sombra*/
+    box-shadow: 0px 0px 10px #cccccc;
 }
 
 .card-apresentacao, .container-autora, .card-livros {
-    padding: 4%;
+    display: block;
+    text-align: center;
+    padding: 5% 10%;
+    margin: 10px auto;
 }
 
 .card-apresentacao__titulo, .container-autora__titulo, .card-livros__titulo {
     color: rgb(94, 83, 30);
-    font-size: 30px;
+    font-size: 1.6rem;
+    display: block;
+    text-align: left;
+    margin-bottom: 15px;
 }
 
 .container-autora__titulo {
     text-align: right;
 }
 
-.container-resumo, .container-biografia {
-    display: flex;
-    align-items: center;
+.card-livros__titulo {
+    display: block;
+    text-align: center;
 }
 
-.container-biografia {
-    flex-direction: row-reverse;
+.container-resumo, .container-biografia {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .container-autora__paragrafos p, .container-resumo__paragrafos p {
     color: rgb(41, 39, 39);
-    font-size: 16px;
+    font-size: 1.2rem;
     text-align: justify;
-    width: 95%;
-}
-
-.container-autora__paragrafos p {
-    margin-left: 5%;
-    margin-right: 5%;
+    width: 100%;
 }
 
 .container-resumo__imagem, .container-autora__imagem {
-    height: 300px;
+    height: 215px;
+    padding: 5px 10px;
 }
 
-.card-livros__titulo {
-    margin-bottom: 10px;
-    margin-left: 11%;
+.container-resumo__imagem {
+    float: right;
+}
+
+.container-autora__imagem {
+    float: left;
 }
 
 .container-listas {
     display: flex;
-    justify-content: space-around;
-    margin-bottom: 60px;
+    flex-wrap: wrap;
+    width: 100%;
 }
 
 .lista {
-    width: 28%;
+    width: 100%;
+    height: 280px;
     background-color: #ac9523;
     border-radius: 5px;
-    padding: 12px;
+    padding: 30px;
     transition: 0.5s all;
     box-shadow: 3px 3px 9px #97831e;
+    display: flex;
+    flex-direction: column;
+    margin: 15px auto;
 }
 
 .lista h3 {
     color: #fff;
-    font-size: 18px;
-    font-weight: 500;
+    font-size: 1.5rem;
+    font-weight: 600;
     text-align: center;
     margin-bottom: 20px;
+    display: block;
 }
 
 .lista a {
     text-decoration: none;
     color: #302803;
-    font-weight: 400;
+    font-weight: 500;
+    font-size: 1.2rem;
+    padding: 5px;
+    margin-left: 15px;
+    display: block;
+    text-align: left;
 }
 
 .lista:hover {
@@ -162,13 +188,18 @@ main {
 
 .lista__item li {
     color: #fff;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     list-style: none;
+    display: flex;
+    align-items: flex-start;
 }
 
 .lista__item li::before {
     content: "▽";
-    margin-right: 10px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-left: 5px;
+    margin-top: 8px;
 }
 
 .card-vamos-conversar {
@@ -179,14 +210,15 @@ main {
 
 .card-vamos-conversar h2 {
     color: rgb(94, 83, 30);
-    font-size: 30px;
-    margin-bottom: 20px;
+    font-size: 1.6rem;
+    margin: 20px auto;
 }
 
 .card-vamos-conversar p {
     text-align: center;
     margin-bottom: 15px;
-    font-size: 20px;
+    font-size: 1.2rem;
+    width: 80%;
 }
 
 .campo-form {
@@ -195,15 +227,20 @@ main {
 }
 
 form {
-    width: 65%;
+    width: 80%;
     border: 2px solid rgb(94, 83, 30);
     padding: 20px;
     border-radius: 10px;
-    margin-bottom: 50px;
+    margin-bottom: 70px;
 }
 
 label, input {
     margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+input#nome, input#email, input#telefone {
+    width: 80%;
 }
 
 label {
@@ -212,10 +249,16 @@ label {
 
 input::placeholder, textarea::placeholder {
     padding: 5px;
+    font-size: 0.9rem;
 }
 
 textarea {
     margin-bottom: 10px;
+    width: 80%;
+}
+
+#regiao {
+    width: 80%;
 }
 
 input:focus, textarea:focus {
@@ -230,12 +273,13 @@ fieldset {
     padding: 15px;
 }
 
-fieldset legend {
+fieldset>legend {
     font-weight: 600;
-    padding: 10px;
+    padding: 2px;
+    font-size: 1.1rem;
 }
 
-fieldset input {
+fieldset>input {
     margin: 10px;
 }
 
@@ -271,6 +315,225 @@ footer {
     color: #fff;
 }
 
-footer p {
-    font-size: 18px;
+footer>p {
+    font-size: 1.1rem;
+}
+
+@media (min-width:768px) {
+    .cabecalho {
+        height: 60vh;
+    }
+
+    .menu {
+        display: flex;
+        justify-content: space-between;
+        height: 50px;
+        align-items: center;
+        padding: 0 20px;
+        position: fixed;
+    }
+
+    .menu__logo{
+        font-size: 2.2rem;
+        margin-left: 5px;
+    }
+
+    .menu-navegacao {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .menu-navegacao__link {
+        font-size: 1.3rem;
+        padding: 10px;
+    }
+
+    .banner {
+        margin-top: 50px;
+        height: 60vh;
+    }
+
+    main {
+        margin: 100px auto;
+    }
+
+    .card-apresentacao__titulo, .container-autora__titulo, .card-livros__titulo {
+    font-size: 2rem;
+    }
+
+    .container-autora__paragrafos p, .container-resumo__paragrafos p, .card-vamos-conversar p {
+        font-size: 1.2rem;
+    }
+
+    .lista h3 {
+        font-size: 1.6rem;
+    }
+
+    .lista a {
+        font-size: 1.4rem;
+    }
+
+    .card-vamos-conversar p {
+        font-size: 1.3rem;
+        width: 70%;
+    }
+
+    .card-vamos-conversar h2 {
+        font-size: 2rem;
+    }
+
+    form {
+        width: 70%;
+    }
+
+    label, input, fieldset>legend {
+        font-size: 1.2rem;
+    }
+
+    input#nome, input#email, input#telefone {
+        width: 60%;
+    }
+
+    input::placeholder, textarea::placeholder {
+        font-size: 1.2rem;
+    }
+
+    textarea {
+        width: 60%;
+    }
+
+    #regiao {
+        width: 60%;
+    }
+
+    footer>p {
+        font-size: 1.2rem;
+    }
+}
+
+@media (min-width:1280px) { 
+    .cabecalho {
+        height: 95vh;
+    }
+
+    .menu {
+        display: flex;
+        justify-content: space-between;
+        height: 50px;
+        align-items: center;
+        padding: 0 20px;
+        position: fixed;
+    }
+
+    .menu__logo{
+        font-size: 2.2rem;
+        margin-left: 5px;
+    }
+
+    .menu-navegacao {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .menu-navegacao__link {
+        font-size: 1.3rem;
+        padding: 10px;
+    }
+
+    .banner {
+        margin-top: 50px;
+        height: 95vh;
+    }
+
+    .banner__titulo {
+        font-size: 2.2rem;
+    }
+
+    .banner__subtitulo {
+        font-size: 1.4rem;
+    }
+  
+    main {
+        width: 85%;
+    }
+
+    .card-apresentacao, .container-autora, .card-livros {
+        padding: 3%;
+        width: 85%;
+    }
+
+    .card-apresentacao__titulo, .container-autora__titulo, .card-livros__titulo {
+        font-size: 2.2rem;
+        
+    }
+
+    .container-autora__paragrafos p, .container-resumo__paragrafos p {
+        font-size: 1.3rem;
+    }
+
+    .container-resumo__imagem, .container-autora__imagem {
+        height: 300px;
+        padding: 0 30px;
+    }
+
+    .container-listas {
+        justify-content: space-around;
+    }
+
+    .lista {
+        width: 32%;
+        height: 250px;
+        border-radius: 5px;
+        padding: 30px;
+        margin: 20px;
+    }
+
+    .lista h3 {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+
+    .lista a {
+        font-weight: 500;
+        font-size: 1.3rem;
+        margin-left: 12px;
+        padding: 2px;
+        text-align: left;
+    }
+
+    .lista__item li::before {
+        font-size: 1rem;
+        margin-left: 2px;
+        margin-top: 5px;
+    }
+
+    .card-vamos-conversar h2 {
+        font-size: 2.2rem;
+    }
+
+    .card-vamos-conversar p {
+        font-size: 1.5rem;
+        width: 65%;
+    }
+
+    form {
+        width: 65%;
+    }
+
+    label, input {
+        font-size: 1.1rem;
+    }
+
+    input::placeholder, textarea::placeholder {
+        font-size: 1.1rem;
+    }
+
+    fieldset>legend {
+        padding: 10px;
+        font-size: 1.2rem;
+    }
+
+    footer>p {
+        font-size: 1.2rem;
+    }
 }
